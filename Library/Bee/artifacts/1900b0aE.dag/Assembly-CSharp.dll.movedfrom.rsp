@@ -15,6 +15,7 @@ Library\Bee\artifacts\movedfrom\Unity.2D.SpriteShape.Runtime.ref.dll_13607063483
 Library\Bee\artifacts\movedfrom\Unity.2D.Tilemap.Editor.ref.dll_4858273654674696337.movedfrom
 Library\Bee\artifacts\movedfrom\Unity.2D.Tilemap.Extras.Editor.ref.dll_10205161182716544682.movedfrom
 Library\Bee\artifacts\movedfrom\Unity.2D.Tilemap.Extras.ref.dll_3971670665523324279.movedfrom
+Library\Bee\artifacts\movedfrom\Unity.InputSystem.ref.dll_18243739575776960641.movedfrom
 Library\Bee\artifacts\movedfrom\Unity.InternalAPIEditorBridge.001.ref.dll_14012374195079120638.movedfrom
 Library\Bee\artifacts\movedfrom\Unity.InternalAPIEngineBridge.001.ref.dll_13038110867686256195.movedfrom
 Library\Bee\artifacts\movedfrom\Unity.Mathematics.Editor.ref.dll_11106105192880348995.movedfrom
@@ -112,4 +113,4 @@ Library\Bee\artifacts\movedfrom\UnityEngine.VirtualTexturingModule.dll_172716438
 Library\Bee\artifacts\movedfrom\UnityEngine.VRModule.dll_9288362447688380472.movedfrom
 Library\Bee\artifacts\movedfrom\UnityEngine.WindModule.dll_3187372101720217684.movedfrom
 Library\Bee\artifacts\movedfrom\UnityEngine.XRModule.dll_12944936819409386902.movedfrom
-Library\Bee\artifacts\movedfrom\Unity.VisualScripting.Antlr3.Runtime.dll_6857291038931657837.movedfrom
+Library\Bee\artifacts\movedfrom\Unity.VisualScripting.Antlr3.Runtime.dll_8547625404631580214.movedfrom
