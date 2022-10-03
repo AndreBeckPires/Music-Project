@@ -5,7 +5,7 @@ using UnityEngine;
 public class ParamLanes : MonoBehaviour
 {
     public int lane;
-    public float start, multiply; 
+    public float start, multiply;    
     // Start is called before the first frame update
     void Start()
     {
