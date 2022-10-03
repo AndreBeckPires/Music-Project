@@ -34,7 +34,7 @@ public class Note : MonoBehaviour
             this.transform.localScale = new Vector3(this.transform.localScale.x+0.01f, this.transform.localScale.y+0.01f, 0);
             sprite.color = new Color (sprite.color.r, sprite.color.g, sprite.color.b, sprite.color.a-0.03f); 
             if(timeLeft <= 0)
-            Destroy(gameObject);  
+            Destroy(this.gameObject);  
         }
 
       //  }
