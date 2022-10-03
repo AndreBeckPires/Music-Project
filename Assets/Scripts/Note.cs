@@ -8,7 +8,7 @@ public class Note : MonoBehaviour
     double timeInstantiated;
     public float assignedTime;
     bool isMoving;
-    float timeLeft = 0.5f;
+    float timeLeft = 0.6f;
      SpriteRenderer sprite;
     void Start()
     {
@@ -23,13 +23,6 @@ public class Note : MonoBehaviour
         double timeSinceInstantiated = SongManager.GetAudioSourceTime() - timeInstantiated;
         float t = (float)(timeSinceInstantiated / (SongManager.Instance.noteTime * 2));
 
-        
-      //  if (t > 1)
-      //  {
-      //      Destroy(gameObject);
-      //  }
-       // else
-     //   {
         if(isMoving)
         {
            transform.localPosition = Vector3.Lerp(Vector3.up * SongManager.Instance.noteSpawnY, Vector3.up * SongManager.Instance.noteDespawnY, t); 
@@ -39,7 +32,7 @@ public class Note : MonoBehaviour
         {
             timeLeft -= Time.deltaTime;
             this.transform.localScale = new Vector3(this.transform.localScale.x+0.01f, this.transform.localScale.y+0.01f, 0);
-            sprite.color = new Color (sprite.color.r, sprite.color.g, sprite.color.b, sprite.color.a-0.01f); 
+            sprite.color = new Color (sprite.color.r, sprite.color.g, sprite.color.b, sprite.color.a-0.03f); 
             if(timeLeft <= 0)
             Destroy(gameObject);  
         }

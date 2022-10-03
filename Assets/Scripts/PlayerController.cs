@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+     bool collision;
     // Start is called before the first frame update
     [SerializeField]
     private Tilemap groundTileMap;
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private PlayerMovement controls;
 
 
+   
     private void Awake(){
         controls = new PlayerMovement();
     }
@@ -32,7 +34,18 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         controls.Main.Movement.performed += ctx => Move(ctx.ReadValue<Vector2>());
+        collision = false;
     }
+
+    void Update(){
+        
+        if(collision)
+        {
+           
+        }
+     }
+        
+    
 
     private void Move(Vector2 direction){
         if(CanMove(direction))
@@ -48,5 +61,13 @@ public class PlayerController : MonoBehaviour
         return true;
     }
     // Update is called once per frame
+    
+      void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Note")
+        {
+            collision = true;
+        }
+    }
   
 }
