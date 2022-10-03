@@ -39,10 +39,7 @@ public class PlayerController : MonoBehaviour
 
     void Update(){
         
-        if(collision)
-        {
-           
-        }
+
      }
         
     
@@ -67,6 +64,7 @@ public class PlayerController : MonoBehaviour
         if (col.gameObject.tag == "Note")
         {
             collision = true;
+            this.GetComponent<lifeCount>().LoseLife();
         }
     }
   
