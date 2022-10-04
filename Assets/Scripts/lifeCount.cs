@@ -10,6 +10,8 @@ public class lifeCount : MonoBehaviour
    public Image[] lives;
    public int livesRemaining;
    public GameObject gameOver;
+   public GameObject pointsCounter;
+
 
    void Start(){
       
@@ -24,7 +26,7 @@ public class lifeCount : MonoBehaviour
          Debug.Log("you lost");
          gameOver.SetActive(true);
          gameOver.GetComponent<gameOver>().setGameIsOver(true);
-         
+         pointsCounter.SetActive(false);
          Destroy(this.gameObject);
          
          

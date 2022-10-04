@@ -18,6 +18,10 @@ public class gameOver : MonoBehaviour
         if(gamerIsOver)
          pointsText.text = obj.GetComponent<ScoreManager>().getScore().ToString();
     }
+
+
+
+     
     public void setGameIsOver(bool isOver){
         gamerIsOver  = isOver;
     }
