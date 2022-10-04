@@ -16,6 +16,9 @@ public class lifeCount : MonoBehaviour
    void Start(){
       
    }
+   void Update(){
+    Debug.Log(livesRemaining);
+   }
    public void LoseLife(){
    
      livesRemaining--;
@@ -31,6 +34,23 @@ public class lifeCount : MonoBehaviour
          
          
      }
+   }
+   public void addLife(){
+    
+      if(livesRemaining < 4)
+      {  
+      livesRemaining++;
+      if(lives[0].enabled == false)
+      lives[0].enabled = true;
+      else if(lives[1].enabled == false)
+      lives[1].enabled = true;
+      else if(lives[2].enabled == false)
+      lives[2].enabled = true;
+      else if(lives[3].enabled == false)
+      lives[3].enabled = true;
+
+      }
+    
    }
 
 

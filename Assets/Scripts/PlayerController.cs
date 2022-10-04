@@ -14,7 +14,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Tilemap collisionTileMap;
     private PlayerMovement controls;
+    public GameObject pointsController;
+    float coins = 0;
 
+     public TMPro.TextMeshPro coinText;
 
    
     private void Awake(){
@@ -38,8 +41,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update(){
-        
-
+         coinText.text = coins.ToString();
      }
         
     
@@ -65,6 +67,17 @@ public class PlayerController : MonoBehaviour
         {
             collision = true;
             this.GetComponent<lifeCount>().LoseLife();
+        }
+        if (col.gameObject.tag == "Coin")
+        {
+            pointsController.GetComponent<ScoreManager>().addPoint(5);
+            coins++;
+          
+            if(coins >= 5)
+            {
+                this.GetComponent<lifeCount>().addLife();
+                coins = 0;
+            }
         }
     }
   
