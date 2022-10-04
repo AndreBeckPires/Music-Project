@@ -78,6 +78,7 @@ public class PlayerController : MonoBehaviour
                 this.GetComponent<lifeCount>().addLife();
                 coins = 0;
             }
+            col.gameObject.GetComponent<Note>().ParticleDestroy();
         }
     }
   

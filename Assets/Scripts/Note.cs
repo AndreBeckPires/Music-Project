@@ -43,4 +43,12 @@ public class Note : MonoBehaviour
             ScoreManager.Point();
         }
     }
+
+    public void ParticleDestroy()
+    {
+
+
+
+        Destroy(gameObject);
+    }
 }
