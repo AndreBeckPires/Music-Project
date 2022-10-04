@@ -10,7 +10,6 @@ public class lifeCount : MonoBehaviour
    public Image[] lives;
    public int livesRemaining;
    public GameObject gameOver;
-   public GameObject[] spawner;
 
    void Start(){
       
@@ -27,10 +26,7 @@ public class lifeCount : MonoBehaviour
          gameOver.GetComponent<gameOver>().setGameIsOver(true);
          
          Destroy(this.gameObject);
-         for(int i =0; i < spawner.Length; i ++)
-         {
-            spawner[i].SetActive(false);
-         }
+         
          
      }
    }
