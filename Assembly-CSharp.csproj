@@ -58,11 +58,15 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\lifeCount.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\AudioPeer.cs" />
+    <Compile Include="Assets\LaneController.cs" />
+    <Compile Include="Assets\Scripts\Audio\AudioPeer.cs" />
     <Compile Include="Assets\Scripts\Note.cs" />
-    <Compile Include="Assets\Scripts\changeSprite.cs" />
-    <Compile Include="Assets\Scripts\ParamLanes.cs" />
     <Compile Include="Assets\LoadMusicFile.cs" />
+    <Compile Include="Assets\Scripts\changeSprite.cs" />
+    <Compile Include="Assets\PlayButton.cs" />
+    <Compile Include="Assets\Scripts\Audio\ParamLanes.cs" />
+    <Compile Include="Assets\Scripts\Audio\AudioSync.cs" />
+    <Compile Include="Assets\Scripts\Audio\AudioSyncScale.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

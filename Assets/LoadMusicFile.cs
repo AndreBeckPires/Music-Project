@@ -7,9 +7,12 @@ using UnityEngine.Networking;
 
 public class LoadMusicFile : MonoBehaviour
 {
-    public AudioSource music;
+    public AudioClip clip;
     string path;
-
+    private void Start()
+    {
+        DontDestroyOnLoad(this);
+    }
     public void OpenFileBrowser()
     {
         path = EditorUtility.OpenFilePanel("Select your music", "ogg", "ogg");
@@ -27,9 +30,7 @@ public class LoadMusicFile : MonoBehaviour
         }
         else
         {
-            AudioClip clip = ((DownloadHandlerAudioClip)www.downloadHandler).audioClip;
-            music.clip = clip;
-            music.Play();
+           clip = ((DownloadHandlerAudioClip)www.downloadHandler).audioClip;
         }
     }
 
