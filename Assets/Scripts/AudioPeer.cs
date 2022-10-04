@@ -8,8 +8,10 @@ using UnityEngine;
 public class AudioPeer : MonoBehaviour
 {
     AudioSource audioSource;
+
     public static float[] samples = new float[512];
     public static float[] freqBand  = new float[8];
+    
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +50,7 @@ public class AudioPeer : MonoBehaviour
             average /= sampleCount;
 
             freqBand[i] = average * 10;
+            Debug.Log(freqBand[i]);
         }
     }
 }

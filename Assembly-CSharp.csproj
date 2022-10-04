@@ -58,13 +58,11 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\lifeCount.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\Lane.cs" />
-    <Compile Include="Assets\Scripts\Note.cs" />
-    <Compile Include="Assets\Scripts\SongManager.cs" />
-    <Compile Include="Assets\Scripts\changeSprite.cs" />
     <Compile Include="Assets\Scripts\AudioPeer.cs" />
-    <Compile Include="Assets\Scripts\Instantiate512arrows.cs" />
+    <Compile Include="Assets\Scripts\Note.cs" />
+    <Compile Include="Assets\Scripts\changeSprite.cs" />
     <Compile Include="Assets\Scripts\ParamLanes.cs" />
+    <Compile Include="Assets\LoadMusicFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
