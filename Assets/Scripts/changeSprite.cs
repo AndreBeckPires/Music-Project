@@ -45,7 +45,7 @@ public class changeSprite : MonoBehaviour
 
       void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Note")
+        if (col.gameObject.tag == "Note" && gameObject.GetComponent<PlayerController>().canTakeDamage)
         {
             collision = true;
         }

@@ -9,6 +9,7 @@ public class Note : MonoBehaviour
     bool isMoving;
     float timeLeft = 0.6f;
     public Vector3 dir;
+    public GameObject particle;
      SpriteRenderer sprite;
     void Start()
     {
@@ -46,7 +47,7 @@ public class Note : MonoBehaviour
 
     public void ParticleDestroy()
     {
-
+        Instantiate(particle, transform.position, Quaternion.identity);
 
 
         Destroy(gameObject);

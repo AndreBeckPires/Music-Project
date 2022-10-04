@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dir: {x: 0, y: -10, z: 0}
+  particle: {fileID: 2476588112404692602, guid: f49f4d30d5a12e343a976122e684a247, type: 3}
 --- !u!50 &-9055972062338356539
 Rigidbody2D:
   serializedVersion: 4

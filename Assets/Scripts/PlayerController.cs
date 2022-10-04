@@ -16,10 +16,11 @@ public class PlayerController : MonoBehaviour
     private PlayerMovement controls;
     public GameObject pointsController;
     float coins = 0;
-
+    public bool canTakeDamage = true;
+    private float damageTimer = .1f;
      public TMPro.TextMeshPro coinText;
 
-   
+
     private void Awake(){
         controls = new PlayerMovement();
     }
@@ -42,6 +43,25 @@ public class PlayerController : MonoBehaviour
 
     void Update(){
          coinText.text = coins.ToString();
+
+        if (!canTakeDamage)
+        {
+            damageTimer -= Time.deltaTime;
+            Color tmp = gameObject.GetComponent<SpriteRenderer>().color;
+            tmp.a = 0.5f;
+            gameObject.GetComponent<SpriteRenderer>().color = tmp;
+            if (damageTimer <= 0)
+            {
+                canTakeDamage = true;
+            }
+        }
+        else
+        {
+            Color tmp = gameObject.GetComponent<SpriteRenderer>().color;
+            tmp.a = 1f;
+            gameObject.GetComponent<SpriteRenderer>().color = tmp; 
+            damageTimer = .1f;
+        }
      }
         
     
@@ -49,6 +69,7 @@ public class PlayerController : MonoBehaviour
     private void Move(Vector2 direction){
         if(CanMove(direction))
         {
+            canTakeDamage = false;
             transform.position += (Vector3)direction;
         }
     }
@@ -63,7 +84,7 @@ public class PlayerController : MonoBehaviour
     
       void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Note")
+        if (col.gameObject.tag == "Note" && canTakeDamage)
         {
             collision = true;
             this.GetComponent<lifeCount>().LoseLife();

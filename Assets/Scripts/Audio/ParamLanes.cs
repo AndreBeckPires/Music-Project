@@ -22,7 +22,7 @@ public class ParamLanes : MonoBehaviour
         timeToSpawn -= Time.deltaTime;
         if (AudioPeer.freqBand[lane] > force && timeToSpawn <= 0)
         {
-            if(Random.Range(0,100) >= 50)
+            if(AudioPeer.freqBand[lane] > 1.8)
             {
             Instantiate(arrow, transform.position, Quaternion.identity);
 
